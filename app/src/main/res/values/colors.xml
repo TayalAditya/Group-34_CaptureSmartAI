@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Theme Colors (Using Greys) -->
+    <color name="light_primary">#212121</color> <!-- Dark Grey -->
+    <color name="light_primary_dark">#000000</color> <!-- Black -->
+    <color name="light_on_primary">#FFFFFF</color> <!-- White -->
+    <color name="light_secondary">#424242</color> <!-- Medium Grey -->
+    <color name="light_on_secondary">#FFFFFF</color> <!-- White -->
+    <color name="light_background">#FAFAFA</color> <!-- Very Light Grey -->
+    <color name="light_surface">#FFFFFF</color> <!-- White -->
+    <color name="light_on_background">#000000</color> <!-- Black -->
+    <color name="light_on_surface">#000000</color> <!-- Black -->
+
+    <!-- Dark Theme Colors (Using Greys) -->
+    <color name="dark_primary">#424242</color> <!-- Medium Grey -->
+    <color name="dark_primary_dark">#212121</color> <!-- Dark Grey -->
+    <color name="dark_on_primary">#FFFFFF</color> <!-- White -->
+    <color name="dark_secondary">#616161</color> <!-- Lighter Grey -->
+    <color name="dark_on_secondary">#FFFFFF</color> <!-- White -->
+    <color name="dark_background">#121212</color> <!-- Very Dark Grey -->
+    <color name="dark_surface">#212121</color> <!-- Dark Grey -->
+    <color name="dark_on_background">#FFFFFF</color> <!-- White -->
+    <color name="dark_on_surface">#FFFFFF</color> <!-- White -->
+
+    <!-- Common Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="button_black">#FF000000</color> <!-- Specific Black for Button -->
+    <color name="button_on_black">#FFFFFFFF</color> <!-- White text on black button -->
+
+    <!-- Define your new color palette -->
+    <color name="purple_200">#FFBB86FC</color> <!-- Keep for compatibility or remove if unused -->
+    <color name="purple_500">#FF6200EE</color> <!-- Keep for compatibility or remove if unused -->
+    <color name="purple_700">#FF3700B3</color> <!-- Keep for compatibility or remove if unused -->
+    <color name="teal_200">#FF03DAC5</color> <!-- Keep for compatibility or remove if unused -->
+    <color name="teal_700">#FF018786</color> <!-- Keep for compatibility or remove if unused -->
+
+    <!-- New Material 3 Color Palette (Teal/Amber) -->
+    <color name="md_theme_primary">#006A6A</color> <!-- Teal Primary -->
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#6FF7F6</color>
+    <color name="md_theme_onPrimaryContainer">#002020</color>
+    <color name="md_theme_secondary">#FFB86F</color> <!-- Amber Secondary -->
+    <color name="md_theme_onSecondary">#4A2A00</color>
+    <color name="md_theme_secondaryContainer">#FFDDBE</color>
+    <color name="md_theme_onSecondaryContainer">#2C1600</color>
+    <color name="md_theme_tertiary">#FFB86F</color> <!-- Using Amber as Tertiary too -->
+    <color name="md_theme_onTertiary">#4A2A00</color>
+    <color name="md_theme_tertiaryContainer">#FFDDBE</color>
+    <color name="md_theme_onTertiaryContainer">#2C1600</color>
+    <color name="md_theme_error">#BA1A1A</color>
+    <color name="md_theme_onError">#FFFFFF</color>
+    <color name="md_theme_errorContainer">#FFDAD6</color>
+    <color name="md_theme_onErrorContainer">#410002</color>
+    <color name="md_theme_background">#FAFDFD</color>
+    <color name="md_theme_onBackground">#191C1C</color>
+    <color name="md_theme_surface">#FAFDFD</color>
+    <color name="md_theme_onSurface">#191C1C</color>
+    <color name="md_theme_surfaceVariant">#DAE5E4</color>
+    <color name="md_theme_onSurfaceVariant">#3F4948</color>
+    <color name="md_theme_outline">#6F7979</color>
+    <color name="md_theme_shadow">#000000</color>
+    <color name="md_theme_inverseSurface">#2D3131</color>
+    <color name="md_theme_inverseOnSurface">#EFF1F1</color>
+    <color name="md_theme_inversePrimary">#4CDADA</color>
+    <color name="md_theme_surfaceTint">#006A6A</color>
+</resources>

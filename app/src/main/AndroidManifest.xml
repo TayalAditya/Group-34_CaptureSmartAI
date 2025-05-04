@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.dummy"> <!-- Make sure package name is correct -->
+
+    <!-- Add Internet permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Camera permission -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.any" />
+    <!-- Optional storage permission -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Dummy"
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">  <!-- Add this for HTTP testing -->
+        <activity
+            android:name=".StartActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"> <!-- Added orientation lock -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Dummy"> <!-- CORRECT: Use Theme.Dummy -->
+        </activity>
+
+        <!-- New UnblurActivity -->
+        <activity
+            android:name=".UnblurActivity"
+            android:exported="false"
+            android:parentActivityName=".StartActivity"
+            android:screenOrientation="portrait"> <!-- Added orientation lock -->
+            <!-- Add meta-data for parent activity if using android:parentActivityName -->
+             <meta-data
+                 android:name="android.support.PARENT_ACTIVITY"
+                 android:value=".StartActivity" />
+        </activity>
+        <activity
+            android:name=".ComparisonActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_comparison"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.Dummy"> <!-- CORRECT: Use Theme.Dummy -->
+            <!-- Parent activity meta-data -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <!-- Declare HeatmapActivity -->
+        <activity
+            android:name=".HeatmapActivity"
+            android:exported="false"
+            android:label="@string/title_activity_heatmap"
+            android:parentActivityName=".ComparisonActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Dummy"> <!-- CORRECT: Use Theme.Dummy -->
+             <!-- Parent activity meta-data (optional, depends on desired back navigation) -->
+             <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ComparisonActivity" />
+        </activity>
+
+        <!-- Add this block for HeatmapUploadActivity -->
+        <activity
+            android:name=".HeatmapUploadActivity"
+            android:exported="false"
+            android:label="@string/title_activity_heatmap_upload"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Dummy"> <!-- Use your app's theme -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" /> <!-- Or appropriate parent -->
+        </activity>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.Material3.DayNight"> <!-- Example: Use a theme WITH an ActionBar -->
+            <!-- Parent activity meta-data -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.dummy.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" /> <!-- Points to your paths file -->
+        </provider>
+        
+    </application>
+
+</manifest>

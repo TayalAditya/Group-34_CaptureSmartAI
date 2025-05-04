@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_capture"
+            android:icon="@drawable/ic_camera"
+            android:title="Capture Image" />
+        <item
+            android:id="@+id/nav_blur_severity"
+            android:icon="@drawable/ic_blur_on"
+            android:title="Blur Severity" />
+        <item
+            android:id="@+id/nav_heatmap"
+            android:icon="@drawable/ic_heatmap"
+            android:title="Heatmap Generation" />
+    </group>
+
+</menu>

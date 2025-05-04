@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Define your new color palette for dark theme -->
+    <color name="purple_200">#FFBB86FC</color> <!-- Keep for compatibility or remove if unused -->
+    <color name="purple_500">#FF6200EE</color> <!-- Keep for compatibility or remove if unused -->
+    <color name="purple_700">#FF3700B3</color> <!-- Keep for compatibility or remove if unused -->
+    <color name="teal_200">#FF03DAC5</color> <!-- Keep for compatibility or remove if unused -->
+    <color name="teal_700">#FF018786</color> <!-- Keep for compatibility or remove if unused -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- New Material 3 Color Palette (Teal/Amber - Dark) -->
+    <color name="md_theme_primary">#4CDADA</color> <!-- Lighter Teal Primary -->
+    <color name="md_theme_onPrimary">#003737</color>
+    <color name="md_theme_primaryContainer">#005050</color>
+    <color name="md_theme_onPrimaryContainer">#6FF7F6</color>
+    <color name="md_theme_secondary">#FFB86F</color> <!-- Amber Secondary (can stay same or adjust) -->
+    <color name="md_theme_onSecondary">#4A2A00</color>
+    <color name="md_theme_secondaryContainer">#693E00</color>
+    <color name="md_theme_onSecondaryContainer">#FFDDBE</color>
+    <color name="md_theme_tertiary">#FFB86F</color> <!-- Amber Tertiary (can stay same or adjust) -->
+    <color name="md_theme_onTertiary">#4A2A00</color>
+    <color name="md_theme_tertiaryContainer">#693E00</color>
+    <color name="md_theme_onTertiaryContainer">#FFDDBE</color>
+    <color name="md_theme_error">#FFB4AB</color>
+    <color name="md_theme_onError">#690005</color>
+    <color name="md_theme_errorContainer">#93000A</color>
+    <color name="md_theme_onErrorContainer">#FFDAD6</color>
+    <color name="md_theme_background">#191C1C</color>
+    <color name="md_theme_onBackground">#E0E3E2</color>
+    <color name="md_theme_surface">#191C1C</color>
+    <color name="md_theme_onSurface">#E0E3E2</color>
+    <color name="md_theme_surfaceVariant">#3F4948</color>
+    <color name="md_theme_onSurfaceVariant">#BFC9C8</color>
+    <color name="md_theme_outline">#899392</color>
+    <color name="md_theme_shadow">#000000</color>
+    <color name="md_theme_inverseSurface">#E0E3E2</color>
+    <color name="md_theme_inverseOnSurface">#191C1C</color>
+    <color name="md_theme_inversePrimary">#006A6A</color>
+    <color name="md_theme_surfaceTint">#4CDADA</color>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HeatmapUploadActivity">
+
+    <!-- Button to select an image -->
+    <Button
+        android:id="@+id/buttonUploadHeatmap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Image for Heatmap"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- ImageView to display the resulting heatmap -->
+    <ImageView
+        android:id="@+id/imageViewHeatmapResult"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/buttonUploadHeatmap"
+        app:layout_constraintBottom_toTopOf="@id/progressBarHeatmapUpload"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Generated heatmap result"
+        app:srcCompat="@drawable/ic_placeholder" /> <!-- Placeholder image -->
+
+    <!-- ProgressBar shown during upload/processing -->
+    <ProgressBar
+        android:id="@+id/progressBarHeatmapUpload"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/textViewHeatmapUploadStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible"/> <!-- Show in preview -->
+
+    <!-- TextView for status messages (uploading, generating, error) -->
+    <TextView
+        android:id="@+id/textViewHeatmapUploadStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Status message here..."
+        tools:visibility="visible"/> <!-- Show in preview -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

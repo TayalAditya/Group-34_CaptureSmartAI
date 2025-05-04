@@ -1,0 +1,25 @@
+<!-- filepath: app/src/main/res/drawable/ic_heatmap.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal"> <!-- Use theme color -->
+  <path
+      android:fillType="evenOdd"
+      android:pathData="M12,3c-4.97,0 -9,4.03 -9,9s4.03,9 9,9 9,-4.03 9,-9 -4.03,-9 -9,-9zM12,19c-3.86,0 -7,-3.14 -7,-7s3.14,-7 7,-7 7,3.14 7,7 -3.14,7 -7,7z">
+    <aapt:attr name="android:fillColor">
+      <gradient
+          android:startX="3"
+          android:startY="12"
+          android:endX="21"
+          android:endY="12"
+          android:type="linear">
+        <item android:offset="0.0" android:color="#FF0000FF"/> <!-- Blue -->
+        <item android:offset="0.5" android:color="#FF00FF00"/> <!-- Green -->
+        <item android:offset="1.0" android:color="#FFFF0000"/> <!-- Red -->
+      </gradient>
+    </aapt:attr>
+  </path>
+</vector>

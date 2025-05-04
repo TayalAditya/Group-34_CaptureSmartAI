@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".MainActivity">
+
+    <!-- Main Content Area -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:colorBackground">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Camera Preview - MAKE SURE THIS EXISTS WITH THE CORRECT ID -->
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/controlsCard"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Controls Section in a Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/controlsCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="4dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/controlsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- AI Mode Switch -->
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:text="@string/ai_mode_label" /> <!-- Use string resource -->
+
+                    <!-- Manual Controls / Display Section -->
+                    <LinearLayout
+                        android:id="@+id/manualControlsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+
+                        <!-- ISO Control/Display -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/iso_label"
+                                android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                            <SeekBar
+                                android:id="@+id/seekBarISO"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:max="1600"
+                                android:min="100"
+                                android:progress="400" />
+
+                            <TextView
+                                android:id="@+id/textViewISOValue"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:text="400"
+                                android:textAppearance="?attr/textAppearanceBodyMedium" />
+                        </LinearLayout>
+
+                        <!-- Shutter Speed Control/Display -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shutter_label"
+                                android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                            <SeekBar
+                                android:id="@+id/seekBarShutter"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:max="1000"
+                                android:min="1"
+                                android:progress="125" />
+
+                            <TextView
+                                android:id="@+id/textViewShutterValue"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:text="1/125"
+                                android:textAppearance="?attr/textAppearanceBodyMedium" />
+                        </LinearLayout>
+
+                        <!-- Exposure Control/Display -->
+
+                    </LinearLayout> <!-- End Manual Controls Layout -->
+
+                    <!-- Action Buttons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+
+                        <!-- First row: Apply AI and Capture -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <!-- Apply AI Button -->
+
+                            <!-- Capture Button -->
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/buttonCapture"
+                                style="@style/Widget.Material3.Button"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="@string/capture_button_label"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <!-- Second row: Recommend -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonRecommend"
+                            style="@style/Widget.Material3.Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:backgroundTint="@color/button_black"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="@string/recommend_button_label"
+                            android:textColor="@color/button_on_black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <!-- Comparison Layout (Initially Hidden) -->
+                    <LinearLayout
+                        android:id="@+id/comparisonLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:visibility="visible"> <!-- tools:visibility makes it visible in preview -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/comparison_title"
+                            android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- Manual Image Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/manual_label"
+                                    android:textAppearance="?attr/textAppearanceLabelSmall" />
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/imageManual"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="250dp" 
+                                    android:scaleType="centerCrop"
+                                    android:background="?attr/colorSurfaceVariant"
+                                    android:contentDescription="@string/manual_capture_desc"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.SmallComponent" />
+                            </LinearLayout>
+
+                            <!-- AI Image Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/ai_label"
+                                    android:textAppearance="?attr/textAppearanceLabelSmall" />
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/imageAI"
+                                    android:layout_width="match_parent" 
+                                    android:layout_height="250dp"
+                                    android:scaleType="centerCrop"
+                                    android:background="?attr/colorSurfaceVariant"
+                                    android:contentDescription="@string/ai_capture_desc"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.SmallComponent" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- Add the Compare Button HERE -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonCompare"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Compare Blur Scores" />
+
+                    </LinearLayout> <!-- End Comparison Layout -->
+
+                </LinearLayout> <!-- End Controls Inner Layout -->
+            </ScrollView>
+        </com.google.android.material.card.MaterialCardView> <!-- End Controls Card -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout> <!-- End Main Content Area -->
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

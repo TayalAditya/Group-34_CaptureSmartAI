@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">CapSmart</string>
+
+    <!-- UI Labels -->
+    <string name="ai_mode_label">AI Mode</string>
+    <string name="recommend_button_label">Recommend</string>
+    <string name="apply_ai_button_label">Apply AI</string>
+    <string name="capture_button_label">Capture</string>
+    <string name="comparison_title">Comparison</string>
+    <string name="manual_label">Manual</string>
+    <string name="ai_label">AI</string>
+    <string name="iso_label">ISO</string>
+    <string name="exposure_label">Exposure</string>
+    <string name="shutter_label">Shutter</string>
+    <string name="brightness_label">Brightness</string>
+
+    <!-- Content Descriptions -->
+    <string name="manual_capture_desc">Manually captured image</string>
+    <string name="ai_capture_desc">Image captured with AI settings</string>
+
+    <!-- Add other strings used by your app -->
+    <string name="upload_card_title">Upload Image to\nCalculate Blur Score</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_blur_severity">Blur Severity</string>
+    <string name="menu_capture">Capture Image</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="heatmap_image_description">Generated Heatmap Image</string>
+    <string name="title_activity_heatmap">Heatmap</string> <!-- Add title for the activity -->
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_comparison">Comparison</string>
+    <string name="title_activity_unblur">Blur Severity</string>
+    <string name="title_activity_heatmap_upload">Generate Heatmap</string>
+    <string name="nav_header_title">CapSmart</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="menu_heatmap">Heatmap Generation</string>
+    <string name="menu_settings">Settings</string>
+    <string name="ic_placeholder">Placeholder Image</string>
+</resources>
