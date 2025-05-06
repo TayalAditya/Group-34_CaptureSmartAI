@@ -27,7 +27,7 @@ class UnblurActivity : BaseDrawerActivity() {
 
     private val TAG = "UnblurActivity"
     // Use the same server URL or a different one if needed for single image analysis
-    private val SERVER_URL = "http://192.168.188.224:5000/analyze" // Or your specific endpoint
+    private val SERVER_URL = "http://IP/analyze" // Or your specific endpoint
 
     // Views from content_unblur.xml
     private lateinit var buttonSelectImage: Button
