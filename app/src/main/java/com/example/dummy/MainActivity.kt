@@ -51,7 +51,7 @@ class MainActivity : BaseDrawerActivity() {
     private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
 
     // URL for the settings recommendation API (Port 5001)
-    private val SETTINGS_API_URL = "http://192.168.188.224:5001/recommend_settings"
+    private val SETTINGS_API_URL = "http://IP/recommend_settings"
 
     // UI Components
     private lateinit var previewView: PreviewView
