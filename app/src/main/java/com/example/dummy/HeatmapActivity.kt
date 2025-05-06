@@ -26,7 +26,7 @@ class HeatmapActivity : BaseDrawerActivity() { // Inherit from BaseDrawerActivit
 
     private val TAG = "HeatmapActivity"
     // Use the same base URL as MainActivity, just change the endpoint
-    private val HEATMAP_API_URL = "http://192.168.188.224:5001/generate_heatmap" // Make sure IP is correct
+    private val HEATMAP_API_URL = "http://IP/generate_heatmap" // Make sure IP is correct
 
     private lateinit var imageViewHeatmap: ImageView
     private lateinit var progressBarHeatmap: ProgressBar
