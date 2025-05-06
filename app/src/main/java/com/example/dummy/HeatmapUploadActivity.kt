@@ -30,7 +30,7 @@ class HeatmapUploadActivity : BaseDrawerActivity() {
 
     private val TAG = "HeatmapUploadActivity"
     // Endpoint for heatmap generation
-    private val HEATMAP_API_URL = "http://192.168.188.224:5001/generate_heatmap" // Ensure IP is correct
+    private val HEATMAP_API_URL = "http://IP/generate_heatmap" // Ensure IP is correct
 
     // Views from content_heatmap_upload.xml
     private lateinit var buttonUploadHeatmap: Button
